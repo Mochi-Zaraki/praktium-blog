@@ -16,7 +16,7 @@ const Footer = function() {
         <footer>
             <hr/>
             <span>
-                Copyright Scandio GmbH(C)
+                Built at Scandio GmbH(C)
             </span>
         </footer>
     )
