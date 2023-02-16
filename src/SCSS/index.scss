@@ -1,0 +1,131 @@
+@use "variables";
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    margin: 0;
+    background-color: variables.$MainColor;
+}
+
+main {
+    color: white;
+    margin: 2rem;
+    overflow-y: scroll;
+    max-width: 100%;
+    max-height: 85vh;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    z-index: 2;
+    background-color: #2b2b2b;
+}
+
+header {
+    background-color: #2b2b2b;
+    width: 100%;
+    nav {
+        display: flex;
+        flex-direction: row;
+        a {
+            margin: 0 1rem;
+        }
+    }
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2rem;
+        h1 {
+            color: white;
+            & > a {
+                font-size: xx-large !important;
+                cursor: pointer;
+                &:hover {
+                    color: white !important;
+                }
+            }
+        }
+        a {
+            font-size: 22px;
+        }
+    }
+}
+
+a {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    &:hover {
+        color: darken($color: white, $amount: 45%);
+    }
+}
+
+.BlogPost {
+    aspect-ratio: 16 / 9;
+    background-color: lighten($color: variables.$MainColor, $amount: 20);
+    border-radius: 14px;
+    padding: 5mm;
+    width: 50%;
+    height: 25vh;
+    display: block;
+    margin: 16px 0;
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.BlogWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#postFormDiv {
+    form {
+        div {
+        background-color: lighten($color: variables.$MainColor, $amount: 22);
+        padding: 1rem 6px;
+        border-radius: 24px;
+        & > textarea {
+            width: 100%;
+            resize: vertical;
+        }
+        & > * {
+            margin: 6px 0;
+        }
+        & > button {
+            padding: 12px;
+        }
+        & > input {
+            padding: 10px;
+            margin: 4px 0;
+        }
+    
+        }
+        
+    }
+}
